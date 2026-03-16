@@ -1,0 +1,8 @@
+.poi-marker-dot {
+  display: block;
+  width: 42%;
+  height: 42%;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.12);
+}
