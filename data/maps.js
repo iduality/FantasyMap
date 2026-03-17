@@ -50,8 +50,8 @@ window.MAPS = {
 
   calder: {
     label: "Calder",
-    image: "assets/maps/calder-labeled.png",
-    //image: "assets/maps/calder.jpg",
+    //image: "assets/maps/calder-labeled.png",
+    image: "assets/maps/calder.jpg",
     width: 5000,
     height: 4343,
 
