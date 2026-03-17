@@ -20,6 +20,21 @@
       .replace(/"/g, "&quot;");
   }
 
+  function paragraphHtml(text, className) {
+    var value = text == null ? "" : String(text);
+    var paragraphs = value.split(/\r?\n/).filter(function (part) {
+      return part.trim() !== "";
+    });
+
+    if (!paragraphs.length) {
+      paragraphs = [value];
+    }
+
+    return paragraphs.map(function (part) {
+      return '<p class="' + className + '">' + escapeHtml(part) + "</p>";
+    }).join("");
+  }
+
   function detailLevelForZoom(mapDef, zoom) {
     var thresholds = (mapDef.detailZoomThresholds || []).slice().sort(function (a, b) {
       return a - b;
@@ -446,7 +461,8 @@
       : "";
 
     return '' +
-      '<section class="panel pad poi-detail-panel">' +
+      '<section class="panel poi-detail-panel">' +
+      '<div class="poi-panel-header-wrap">' +
       '<div class="poi-panel-header">' +
       "<div>" +
       '<h2 class="poi-panel-title">' + escapeHtml(poi.name) + "</h2>" +
@@ -454,10 +470,13 @@
       '<div class="poi-panel-coords">(' + poi.x + ", " + poi.y + ')</div>' +
       "</div>" +
       "</div>" +
+      "</div>" +
+      '<div class="poi-panel-body">' +
       summary +
-      '<div class="poi-description-box"><p class="poi-panel-description">' + escapeHtml(poi.description || poi.summary || "No description provided.") + '</p></div>' +
+      paragraphHtml(poi.description || poi.summary || "No description provided.", "poi-panel-description") +
       linkHtml +
       tagHtml +
+      "</div>" +
       "</section>";
   }
 

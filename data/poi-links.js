@@ -22,34 +22,4 @@
  */
 window.POI_LINKS = {
 
-  barrens_route: {
-    label: "Southern Trade Route",
-    entries: [
-      { mapId: "world", poiId: "zantos_keep" },
-      { mapId: "world", poiId: "klineheart" },
-      { mapId: "world", poiId: "emberfall" },
-      { mapId: "barrens", poiId: "crossroads" },
-      { mapId: "barrens", poiId: "ashfall_camp" }
-    ]
-  },
-
-  western_crossings: {
-    label: "Western Crossings",
-    entries: [
-      { mapId: "world", poiId: "mattenos" },
-      { mapId: "world", poiId: "willowford" },
-      { mapId: "barrens", poiId: "salt_hollows" }
-    ]
-  },
-
-  hidden_ruins: {
-    label: "Buried Ruins",
-    entries: [
-      { mapId: "world", poiId: "sunken_crypt" },
-      { mapId: "world", poiId: "forgotten_temple" },
-      { mapId: "barrens", poiId: "buried_gate" },
-      { mapId: "barrens", poiId: "shattered_obelisk" }
-    ]
-  }
-
 };

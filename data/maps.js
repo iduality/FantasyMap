@@ -45,18 +45,20 @@
  *   appear. In this app, a POI type with detailLevel 1 appears at the first threshold,
  *   detailLevel 2 at the second threshold, and so on.
  */
+
 window.MAPS = {
 
-  world: {
-    label: "Kingdom of Valdris",
-    image: "assets/maps/world.jpg",
-    width: 4627,
-    height: 2315,
+  calder: {
+    label: "Calder",
+    image: "assets/maps/calder-labeled.png",
+    //image: "assets/maps/calder.jpg",
+    width: 5000,
+    height: 4343,
 
     defaultView: {
-      zoom: 0.62,
-      panX: -520,
-      panY: -210
+      zoom: 0.5,
+      panX: -475,
+      panY: -485
     },
 
     zoom: {
@@ -65,49 +67,7 @@ window.MAPS = {
       step: 0.1
     },
 
-    detailZoomThresholds: [0.9, 1.45]
+    detailZoomThresholds: [0.75, 1.25]
   },
-
-  barrens: {
-    label: "The Barrens",
-    image: "assets/maps/barrens.jpg",
-    width: 2000,
-    height: 813,
-
-    defaultView: {
-      zoom: 0.72,
-      panX: -180,
-      panY: -48
-    },
-
-    zoom: {
-      min: 0.4,
-      max: 5,
-      step: 0.1
-    },
-
-    detailZoomThresholds: [0.95, 1.5]
-  },
-
-  calder: {
-    label: "Calder",
-    image: "assets/maps/calder.png",
-    width: 5000,
-    height: 5000,
-
-    defaultView: {
-      zoom: 1,
-      panX: 0,
-      panY: 0
-    },
-
-    zoom: {
-      min: 0.4,
-      max: 5,
-      step: 0.1
-    },
-
-    detailZoomThresholds: [0.95, 1.5]
-  }
 
 };

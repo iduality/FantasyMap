@@ -36,8 +36,10 @@
  * Optional attributes:
  * - None currently. Add new attributes only after updating app logic to read them.
  */
+
 window.APP_CONFIG = {
-  defaultMapId: "world",
+
+  defaultMapId: "calder",
 
   ui: {
     showMapSelector: true,
